@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 4</title>
+</head>
+<body>
+  <form>
+    <label for="nom">Nom : </label><input type="text" name="nom" id="nom"/>
+    <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"/>
+    <label for="ville">Ville : </label><input type="text" name="ville" id="ville"/>
+    <button  name="valider" id="valider" onclick="personnalInformation()">Valider</button><!-- Appel de la fonction my personnalInformation() onClick-->
+  </form>
+  <script type="text/javascript">
+  function personnalInformation(){//Déclaration de la fonction personnalInformation
+    var lastname = document.getElementById('nom').value,// création des 3 variables = recup' via getElementById + Variable Result
+        firstname = document.getElementById('prenom').value,
+        city = document.getElementById('ville').value,
+        result;// Variable result qui rassemble les 3 autres
+    result = 'Nom : '+ lastname + '\nPrénom : '+ firstname + '\nVille : ' + city;// concaténation des 3 variables
+    alert(result);//afichage via alerte de la variable résultat
+  }
+</script>
+</body>
+</html>
